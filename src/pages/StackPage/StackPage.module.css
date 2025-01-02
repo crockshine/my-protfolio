@@ -1,0 +1,10 @@
+.stack_page{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vh;
+    max-width: 90vh;
+}

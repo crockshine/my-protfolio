@@ -13,6 +13,7 @@
     "circletype": "^2.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gsap": "^3.12.5",
     "lucide-react": "^0.469.0",
     "next": "15.1.3",
     "react": "^18.3.1",
