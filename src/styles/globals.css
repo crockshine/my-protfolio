@@ -71,3 +71,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar{
+  width: 0.7vh;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(159, 159, 159, 0.18);
+}

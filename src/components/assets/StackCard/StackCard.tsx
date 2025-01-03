@@ -6,12 +6,11 @@ import {IStack} from "@/types/stack.interface";
 import {cn} from "@/lib/utils";
 import {gsap} from 'gsap'
 
-const StackCard: React.FC<IStack> = ({imageUrl, title, description}) => {
+const StackCard: React.FC<IStack> = ({imageUrl, title, description,shadowColor}) => {
     const [isOpen, setOpen] = useState<boolean>(true)
     const cardRef = useRef<HTMLDivElement | null>(null)
     const infoRef = useRef<HTMLDivElement | null>(null)
     const descRef = useRef<HTMLDivElement | null>(null)
-
 
     const tl = gsap.timeline()
     const rotate = useRef<number>(0)
@@ -21,41 +20,48 @@ const StackCard: React.FC<IStack> = ({imageUrl, title, description}) => {
         rotate.current = rotate.current + 180
         if (isOpen) {
             tl
-                .to(cardRef.current,{
+                .to(cardRef.current, {
                     rotateY: rotate.current,
                     duration: 0.2
                 })
                 .to(infoRef.current,
-                    { opacity: 0, duration: 0.2 , delay: -0.2})
+                    {opacity: 0, duration: 0.2, delay: -0.2})
                 .call(() => setOpen(false))
         } else {
             tl
-                .to(cardRef.current,{
+                .to(cardRef.current, {
                     rotateY: rotate.current,
                     duration: 0.3
 
                 })
                 .to(descRef.current,
-                { opacity: 0, duration: 0.2, delay: -0.2 })
+                    {opacity: 0, duration: 0.2, delay: -0.2})
                 .call(() => setOpen(true))
         }
     }
 
     useEffect(() => {
-        // Начальное состояние для info или description
         if (isOpen && infoRef.current) {
-            gsap.to(infoRef.current, { opacity: 1, duration: 0.2});
+            gsap.to(infoRef.current, {opacity: 1, duration: 0.2});
         } else if (descRef.current) {
-            gsap.to(descRef.current, { opacity: 1, duration: 0.2 });
+            gsap.to(descRef.current, {opacity: 1, duration: 0.2});
         }
     }, [isOpen]);
 
+    useEffect(() => {
+        const card = cardRef.current;
+        if (card) {
+            card.style.setProperty('--shadow-color', shadowColor);
+        }
+    }, []);
     return (
         <div
-            className={cn(styles.stack_card, styles.has_info)}
+            className={
+            cn(styles.stack_card,
+                description?.length > 0 && styles.has_info,
+                !isOpen ? styles.openedCard :  styles.closedCard ) }
             onClick={showMore}
             ref={cardRef}
-            data-shadow = 'red'
         >
             {
                 isOpen

@@ -6,7 +6,7 @@ import PageItem from "@/components/assets/PageItem/PageItem";
 const AccordionList = () => {
     const pages: IPage[] = [
         {
-            title: 'обо мне',
+            title: 'кто я',
             page: Pages.ABOUT
         },
         {
@@ -14,7 +14,7 @@ const AccordionList = () => {
             page: Pages.STACK
         },
         {
-            title: 'обо мне',
+            title: 'проекты',
             page: Pages.PROJECTS
         }
     ]
