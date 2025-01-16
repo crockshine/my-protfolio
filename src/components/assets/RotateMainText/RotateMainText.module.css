@@ -1,0 +1,25 @@
+.svg_block{
+    position: absolute;
+    opacity: 0.1;
+}
+
+.circle_text{
+    font-size: 8px;
+    animation: infinityRotate infinite linear 30s ;
+    width: 100vh;
+}
+
+@keyframes infinityRotate {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
+@media (max-aspect-ratio: 1/1){
+    .circle_text{
+        width: 100vw;
+    }
+}

@@ -58,7 +58,7 @@ const StackCard: React.FC<IStack> = ({imageUrl, title, description,shadowColor})
         <div
             className={
             cn(styles.stack_card,
-                description?.length > 0 && styles.has_info,
+                description.length > 0 && styles.has_info,
                 !isOpen ? styles.openedCard :  styles.closedCard ) }
             onClick={showMore}
             ref={cardRef}
@@ -75,7 +75,7 @@ const StackCard: React.FC<IStack> = ({imageUrl, title, description,shadowColor})
                                 alt={'programming language'}
                             />
                         </div>
-                        <span>{title}</span>
+                        <h3>{title}</h3>
                     </div>
                     :
                     <div className={styles.description} ref={descRef}>

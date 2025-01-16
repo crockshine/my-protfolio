@@ -1,0 +1,20 @@
+.project_card{
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    gap: 4vh;
+}
+
+.description_block{
+    flex: 1;
+    display: flex;
+    gap: 4vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-aspect-ratio: 1.5/1) {
+    .project_card{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,9 @@
+.page_list{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    color: white;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-bottom: 10vh;
+}

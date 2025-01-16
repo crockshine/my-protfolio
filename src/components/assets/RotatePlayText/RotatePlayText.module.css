@@ -1,0 +1,36 @@
+.svg_block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 20;
+    width: 30%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle_text{
+    font-size: 21px;
+    animation: infinityRotate infinite linear 15s ;
+}
+
+.svg_block svg:nth-child(2){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes infinityRotate {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
+

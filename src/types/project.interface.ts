@@ -1,6 +1,5 @@
-export interface IStack {
+export interface IProject {
     imageUrl: string,
     title: string,
     description: string,
-    shadowColor: string
 }
