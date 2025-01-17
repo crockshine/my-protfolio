@@ -4,7 +4,8 @@ import React from 'react';
 const About = () => {
     return (
         <div className={styles.about_page}>
-            <div className={'flex-1'}>
+            <div className={styles.empty_block}>
+
             </div>
 
             <div className={styles.text_block}>

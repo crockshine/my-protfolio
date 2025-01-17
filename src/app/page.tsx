@@ -12,12 +12,13 @@ export default function Home() {
             <div className={styles.page_list}>
                 <h1>// обо мне</h1>
                 <About/>
+
                 <h1>// я знаю</h1>
                 <StackPage/>
+
                 <h1>// мои проекты</h1>
                 <ProjectPage/>
             </div>
         </>
-
     );
 }

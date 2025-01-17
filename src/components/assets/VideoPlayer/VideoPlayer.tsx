@@ -55,6 +55,13 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({imageUrl, videoUrl}) => {
                 <div className={styles.video}>
                     <ReactPlayer
                         url={videoUrl}
+                        fallback={ <Image
+                            className={styles.image_block_img}
+                            src={imageUrl}
+                            width={728}
+                            height={381}
+                            alt={'project'}
+                        />}
                         controls
                         playing={play}
                         width="100%"

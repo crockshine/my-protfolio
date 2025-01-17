@@ -4,6 +4,10 @@
     display: flex;
 }
 
+.empty_block{
+    flex: 1;
+}
+
 .text_block{
     flex: 1;
     display: flex;
