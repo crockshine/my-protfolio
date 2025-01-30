@@ -12,15 +12,13 @@ import {
 import Image from "next/image";
 import RotatePlayText from "@/components/assets/RotatePlayText/RotatePlayText";
 import ReactPlayer from "react-player";
+import {useModal} from "@/context/modal.context";
 
-interface VideoPlayerProps {
-    imageUrl: string;
-    videoUrl: string
-}
-
-const VideoPlayer: React.FC<VideoPlayerProps> = ({imageUrl, videoUrl}) => {
-    const [openModal, setOpenModal] = useState(false);
+const VideoPlayer = () => {
     const [play, setPlay] = useState<boolean>(false);
+
+    const modal = useModal()
+    if (modal?.currentModal !== "video" || !modal.modalData) return
 
     useEffect(()=>{
         if(openModal){
@@ -33,11 +31,11 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({imageUrl, videoUrl}) => {
     },[openModal])
 
     return (
-        <Dialog open={openModal} onOpenChange={(open)=>setOpenModal(open)} >
+        <Dialog open={modal.currentModal === 'video'} onOpenChange={modal.closeAll} >
             <DialogTrigger className={styles.image_block}>
                 <Image
                     className={styles.image_block_img}
-                    src={imageUrl}
+                    src={modal.modalData.}
                     width={728}
                     height={381}
                     alt={'project'}

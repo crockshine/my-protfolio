@@ -1,7 +1,7 @@
 import styles from './ProjectCard.module.css'
 import React from "react";
 import {IProject} from "@/types/project.interface";
-import VideoPlayer from "@/components/assets/VideoPlayer/VideoPlayer";
+import VideoPlayer from "@/modal/VideoPlayer/VideoPlayer";
 
 const ProjectCard: React.FC<IProject> = ({title, description, imageUrl}) => {
     return (
