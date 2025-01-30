@@ -93,7 +93,7 @@ const StackPage = () => {
             title: 'github',
             imageUrl: 'gh',
             description: 'Есть опыт командной разработки, настройки репозитория, работы с Pull Request.',
-            shadowColor: '#FFFFFF33'
+            shadowColor: '#FFFFFF20'
         }
     ]
     return (

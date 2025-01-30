@@ -1,4 +1,4 @@
 export interface IVideoPlayer {
-    imag: string;
+    imageUrl: string;
     videoUrl: string
 }

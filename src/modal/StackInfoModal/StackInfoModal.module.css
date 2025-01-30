@@ -1,0 +1,17 @@
+.dialog_content{
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding: 5%;
+    gap: 5%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .dialog_content{
+        width: 80vw;
+        height: 60vh;
+    }
+}

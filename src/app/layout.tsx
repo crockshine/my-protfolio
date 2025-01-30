@@ -7,7 +7,7 @@ import {Modals} from "@/modal";
 
 const unbounded = Unbounded({
     variable: "--font-unbounded-sans",
-    weight: ["200", "700"],
+    weight: ["200", "300","700"],
     subsets: ["cyrillic", "latin"]
 });
 

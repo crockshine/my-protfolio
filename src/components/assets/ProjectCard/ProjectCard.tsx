@@ -6,10 +6,10 @@ import VideoPlayer from "@/modal/VideoPlayer/VideoPlayer";
 const ProjectCard: React.FC<IProject> = ({title, description, imageUrl}) => {
     return (
         <div className={styles.project_card}>
-            <VideoPlayer
-                    imageUrl={`/${imageUrl}.webp`}
-                    videoUrl={'https://youtu.be/Ps5VZeJ5ifU'}
-            />
+            {/*<VideoPlayer*/}
+            {/*        imageUrl={`/${imageUrl}.webp`}*/}
+            {/*        videoUrl={'https://youtu.be/Ps5VZeJ5ifU'}*/}
+            {/*/>*/}
 
             <div className={styles.description_block}>
                 <h2>{title}</h2>

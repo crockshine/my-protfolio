@@ -1,10 +1,11 @@
+'use client'
 import {createContext, ReactNode, useContext, useState} from "react";
 import {ModalData, ModalList} from "@/types/modal";
 
-interface IModalContext<T extends ModalList> {
-    currentModal: T,
-    modalData: ModalData<T> | null
-    onOpen: <K extends ModalList>(name: K, data?: ModalData<K> | null) => void,
+interface IModalContext<T extends ModalList>{
+    currentModal: ModalList,
+    getModalData: <K extends ModalList> (modalName: K) => ModalData<K> | null ,
+    onOpen: <K extends ModalList> (modalName: K, data?: ModalData<K> | null) => void,
     closeAll: () => void,
 }
 
@@ -15,6 +16,7 @@ export const ModalProvider = ({children}: { children: ReactNode }) => {
     const [currentModal, setCurrentModal] = useState<ModalList>('none')
     const onOpen = <T extends ModalList>(name: T, data?: ModalData<T>) => {
         setCurrentModal(name)
+        console.log(name);
         setModalData(data || null)
     }
     const closeAll = () => {
@@ -22,8 +24,16 @@ export const ModalProvider = ({children}: { children: ReactNode }) => {
         setModalData(null)
     }
 
+    const getModalData = <T extends ModalList>(modalName: T): ModalData<T> | null => {
+        // Проверяем, что текущая модалка совпадает с запрашиваемой
+        if (currentModal !== modalName) return null;
+
+        // Приводим modalData к нужному типу, если тип совпадает
+        return modalData as ModalData<T>;
+    }
+
     return (
-        <ModalContext.Provider value={{currentModal, modalData, onOpen, closeAll}}>
+        <ModalContext.Provider value={{currentModal,  getModalData, onOpen, closeAll}}>
             {children}
         </ModalContext.Provider>
     )

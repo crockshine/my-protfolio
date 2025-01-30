@@ -2,7 +2,7 @@ import {IStack} from "@/types/stack.interface";
 import {IVideoPlayer} from "@/types/video.interface";
 
 export type ModalList =
-    "none"
+    | "none"
     | "stack"
     | "video"
 

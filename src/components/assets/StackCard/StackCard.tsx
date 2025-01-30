@@ -1,87 +1,40 @@
 'use client'
 import styles from './StackCard.module.css'
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef} from "react";
 import Image from 'next/image'
 import {IStack} from "@/types/stack.interface";
+import {useModal} from "@/context/modal.context";
 import {cn} from "@/lib/utils";
-import {gsap} from 'gsap'
 
-const StackCard: React.FC<IStack> = ({imageUrl, title, description,shadowColor}) => {
-    const [isOpen, setOpen] = useState<boolean>(true)
+const StackCard: React.FC<IStack> = ({imageUrl, title, description, shadowColor}) => {
+    const modal = useModal()
     const cardRef = useRef<HTMLDivElement | null>(null)
-    const infoRef = useRef<HTMLDivElement | null>(null)
-    const descRef = useRef<HTMLDivElement | null>(null)
-
-    const tl = gsap.timeline()
-    const rotate = useRef<number>(0)
-    const showMore = () => {
-        if (tl.isActive()) return;
-
-        rotate.current = rotate.current + 180
-        if (isOpen) {
-            tl
-                .to(cardRef.current, {
-                    rotateY: rotate.current,
-                    duration: 0.2
-                })
-                .to(infoRef.current,
-                    {opacity: 0, duration: 0.2, delay: -0.2})
-                .call(() => setOpen(false))
-        } else {
-            tl
-                .to(cardRef.current, {
-                    rotateY: rotate.current,
-                    duration: 0.3
-
-                })
-                .to(descRef.current,
-                    {opacity: 0, duration: 0.2, delay: -0.2})
-                .call(() => setOpen(true))
-        }
-    }
 
     useEffect(() => {
-        if (isOpen && infoRef.current) {
-            gsap.to(infoRef.current, {opacity: 1, duration: 0.2});
-        } else if (descRef.current) {
-            gsap.to(descRef.current, {opacity: 1, duration: 0.2});
+        if (cardRef.current !== null){
+            cardRef.current?.style.setProperty('--shadow-color', shadowColor)
         }
-    }, [isOpen]);
+    }, [cardRef]);
 
-    useEffect(() => {
-        const card = cardRef.current;
-        if (card) {
-            card.style.setProperty('--shadow-color', shadowColor);
-        }
-    }, []);
     return (
         <div
-            className={
-            cn(styles.stack_card,
-                description.length > 0 && styles.has_info,
-                !isOpen ? styles.openedCard :  styles.closedCard ) }
-            onClick={showMore}
             ref={cardRef}
+            className={cn(styles.stack_card)}
+            onClick={() => modal?.onOpen('stack',{title, description,imageUrl,shadowColor})}
         >
-            {
-                isOpen
-                    ?
-                    <div className={styles.info} ref={infoRef}>
-                        <div className={styles.img_block}>
-                            <Image
-                                src={`/${imageUrl}.png`}
-                                width={90}
-                                height={100}
-                                alt={'programming language'}
-                            />
-                        </div>
-                        <h3>{title}</h3>
-                    </div>
-                    :
-                    <div className={styles.description} ref={descRef}>
-                        {description}
-                    </div>
-            }
+
+            <div className={styles.info}>
+                <div className={styles.img_block}>
+                    <Image
+                        src={`/${imageUrl}.png`}
+                        width={90}
+                        height={100}
+                        alt={'programming language'}
+                    />
+                </div>
+                <h3>{title}</h3>
+            </div>
+
         </div>
     )
 }
