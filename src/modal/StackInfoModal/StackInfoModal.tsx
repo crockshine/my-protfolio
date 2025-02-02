@@ -19,6 +19,7 @@ const StackInfoModal = () => {
 
 
             <DialogContent className={styles.dialog_content}>
+                <div className={styles.spacer}/>
                 <h2>
                     {
                         modal.getModalData(ModalList.STACK)?.title

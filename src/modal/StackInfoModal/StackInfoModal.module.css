@@ -1,14 +1,15 @@
 .dialog_content{
     width: 50vw;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: end;
     padding: 3vw;
     gap: 2vw;
 }
-
+.spacer{
+    flex-grow: 1;
+}
 .dialog_content h1{
     position: relative;
 }
