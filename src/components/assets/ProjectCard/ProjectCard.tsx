@@ -11,9 +11,9 @@ const ProjectCard: React.FC<IProject> = ({title, description, imageUrl}) => {
     const modal = useModal()
 
     return (
-        <div className={styles.project_card}  onClick={() => modal?.onOpen(ModalList.VIDEO, {imageUrl, videoUrl: 'https://www.youtube.com/watch?v=cE6wxDqdOV0'} )}>
+        <div className={styles.project_card}  >
 
-            <div className={styles.image_block}>
+            <div className={styles.image_block} onClick={() => modal?.onOpen(ModalList.VIDEO, {imageUrl, videoUrl: 'https://www.youtube.com/watch?v=cE6wxDqdOV0'} )}>
                 <Image
                     src={`/${imageUrl}.webp`}
                     width={728}

@@ -18,18 +18,21 @@ const StackInfoModal = () => {
             </div>
 
 
-            <DialogContent className={styles.dialog_content}>
-                <div className={styles.spacer}/>
-                <h2>
-                    {
-                        modal.getModalData(ModalList.STACK)?.title
-                    }
-                </h2>
-                <h3>
-                    {
-                        modal.getModalData(ModalList.STACK)?.description
-                    }
-                </h3>
+            <DialogContent>
+                <div className={styles.dialog_content}>
+                    <div className={styles.spacer}/>
+                    <h2>
+                        {
+                            modal.getModalData(ModalList.STACK)?.title
+                        }
+                    </h2>
+                    <h3>
+                        {
+                            modal.getModalData(ModalList.STACK)?.description
+                        }
+                    </h3>
+                </div>
+
             </DialogContent>
         </Dialog>
     );

@@ -61,4 +61,8 @@
     .image_block:hover{
         animation-play-state: paused;
     }
+    .image_block{
+        flex: none;
+        height: 50vw;
+    }
 }

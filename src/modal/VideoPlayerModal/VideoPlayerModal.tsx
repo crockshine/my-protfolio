@@ -30,7 +30,9 @@ const VideoPlayerModal = () => {
                 <DialogDescription/>
             </div>
 
-            <DialogContent className={styles.dialog_content}>
+            <DialogContent >
+                <div className={styles.dialog_content}>
+
                 <div className={styles.video}>
                     <ReactPlayer
                         url={modal?.getModalData(ModalList.VIDEO)?.videoUrl}
@@ -44,16 +46,17 @@ const VideoPlayerModal = () => {
                 {
                     loading &&
                     <div className={styles.fallback}>
-                        <Image
-                            src={'/loader.gif'}
+                        <img
+                            src={'/Loader.gif'}
                             width={150}
                             height={150}
                             alt={'loader'}
-                            unoptimized
                         />
                         <h2>Пожалуйста, подождите.</h2> <h2>Видео загружается</h2>
                     </div>
                 }
+                </div>
+
             </DialogContent>
         </Dialog>
     );

@@ -10,19 +10,6 @@
 .spacer{
     flex-grow: 1;
 }
-.dialog_content h1{
-    position: relative;
-}
-
-.dialog_content h1::after{
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    height: 2px;
-    width: 120%;
-    border: 1px black solid;
-}
 
 @media (max-aspect-ratio: 1/1) {
     .dialog_content{
