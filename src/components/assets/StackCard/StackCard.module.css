@@ -8,9 +8,10 @@
     flex: 0 0 calc(22% - 1vw);
 }
 
-.stack_card:hover{
+.stack_card:active{
     box-shadow: 0 20px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
 }
+
 
 .info{
     width: 100%;
@@ -44,9 +45,7 @@
     .stack_card{
         flex: 0 0 calc(33% - 1vw);
     }
-    .stack_card:active{
-        box-shadow: 0 20px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
-    }
+
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -58,5 +57,11 @@
 @media (max-aspect-ratio: 1/1.5) {
     .stack_card{
         flex: 0 0 calc(50% - 1vw);
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .stack_card:hover{
+        box-shadow: 0 20px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
     }
 }

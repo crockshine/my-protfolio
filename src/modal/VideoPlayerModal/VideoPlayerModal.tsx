@@ -24,37 +24,27 @@ const VideoPlayerModal = () => {
     }
     return (
         <Dialog open={modal?.currentModal === ModalList.VIDEO} onOpenChange={handleClose}>
-            <div style={{display:'none'}}>
+            <div style={{display: 'none'}}>
                 <DialogTitle/>
                 <DialogHeader/>
                 <DialogDescription/>
             </div>
 
-            <DialogContent >
+            <DialogContent>
                 <div className={styles.dialog_content}>
 
-                <div className={styles.video}>
-                    <ReactPlayer
-                        url={modal?.getModalData(ModalList.VIDEO)?.videoUrl}
-                        controls
-                        width="100%"
-                        height="100%"
-                        onBuffer={() => setLoading(true)}
-                        onReady={() => setLoading(false)}
-                    />
-                </div>
-                {
-                    loading &&
-                    <div className={styles.fallback}>
-                        <img
-                            src={'/Loader.gif'}
-                            width={150}
-                            height={150}
-                            alt={'loader'}
+                    <div className={styles.video}>
+                        <ReactPlayer
+                            url={modal?.getModalData(ModalList.VIDEO)?.videoUrl}
+                            controls
+                            width="100%"
+                            height="100%"
                         />
-                        <h2>Пожалуйста, подождите.</h2> <h2>Видео загружается</h2>
+
                     </div>
-                }
+                    <div className={styles.fallback}>
+                        <h2>Пожалуйста, подождите.</h2> <h2>Видео загружается...</h2>
+                    </div>
                 </div>
 
             </DialogContent>
