@@ -20,6 +20,12 @@
 
 @media (max-aspect-ratio: 1/1){
     .circle_text{
-        width: 100vw;
+        width: 90vw;
+    }
+}
+
+@media (max-aspect-ratio: 1/2){
+    .circle_text{
+        width: 110vw;
     }
 }

@@ -18,6 +18,8 @@
     position: relative;
     animation: infinityAnimation infinite  ease-in-out 3s;
     animation-play-state: running;
+    cursor: pointer;
+
 }
 
 .image_block img{

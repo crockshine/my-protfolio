@@ -4,6 +4,7 @@ import About from "@/my_pages/About/About";
 import StackPage from "@/my_pages/StackPage/StackPage";
 import ProjectPage from "@/my_pages/ProjectPage/ProjectPage";
 import React from "react";
+import Footer from "@/components/assets/Footer/Footer";
 
 export default function Home() {
     return (
@@ -18,7 +19,9 @@ export default function Home() {
 
                 <h1>// мои проекты</h1>
                 <ProjectPage/>
+
             </div>
+            <Footer/>
         </>
     );
 }
