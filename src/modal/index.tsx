@@ -1,11 +1,12 @@
-import VideoPlayer from "@/modal/VideoPlayer/VideoPlayer";
 import StackInfoModal from "@/modal/StackInfoModal/StackInfoModal";
+import VideoPlayerModal from "@/modal/VideoPlayerModal/VideoPlayerModal";
 
 export const Modals = () => {
     return (
         <>
-            {/*<VideoPlayer/>*/}
             <StackInfoModal/>
+            <VideoPlayerModal/>
+
         </>
     )
 }

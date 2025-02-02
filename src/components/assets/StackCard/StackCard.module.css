@@ -1,10 +1,11 @@
 .stack_card{
     --shadow-color: rgba(255, 255, 255, 0);
-    width: 22vh;
-    height: 23vh;
+    width: 5vw;
     background-color: rgba(84, 84, 84, 0.29);
     cursor: pointer;
     transition: 0.2s;
+    aspect-ratio: 1/1.1;
+    flex: 0 0 calc(22% - 1vw);
 }
 
 .stack_card:hover{
@@ -39,20 +40,23 @@
     font-weight: bold;
 }
 
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/0.7) {
     .stack_card{
-        width: 17vh;
-        height: 23vh;
+        flex: 0 0 calc(33% - 1vw);
     }
-
     .stack_card:active{
         box-shadow: 0 20px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
     }
 }
 
-@media (max-aspect-ratio: 2/3) {
+@media (max-aspect-ratio: 1/1) {
     .stack_card{
-        flex: 0 0 calc(50% - 2vh);
-        height: 21vh;
+        flex: 0 0 calc(33% - 1vw);
+    }
+}
+
+@media (max-aspect-ratio: 1/1.5) {
+    .stack_card{
+        flex: 0 0 calc(50% - 1vw);
     }
 }

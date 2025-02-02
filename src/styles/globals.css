@@ -73,7 +73,7 @@ body {
 }
 
 ::-webkit-scrollbar{
-  width: 0.7vh;
+  width: 0.3vw;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -81,29 +81,33 @@ body {
 }
 
 h1{
-  font-size: 5vh;
+  font-size: 64px;
   line-height: 120%;
   font-weight: bold;
 }
 
 h2{
-  font-size: 3vh;
+  font-size: 24px;
   font-weight: bold;
   line-height: 140%;
 }
 
 h3{
-  font-size: 2vh;
+  font-size: 16px;
   line-height: 140%;
   font-weight: 400;
-
 }
 
 @media (max-aspect-ratio: 1/1) {
   h1{
-    font-size: 8vw;
+    font-size: 7vw;
   }
+
   h2{
     font-size: 4vw;
+  }
+
+  h3{
+    font-size: 3vw;
   }
 }

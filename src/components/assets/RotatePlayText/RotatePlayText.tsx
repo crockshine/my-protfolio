@@ -1,15 +1,15 @@
 import styles from './RotatePlayText.module.css'
 import {cn} from "@/lib/utils";
 
-const RotatePlayText = ({className}:{className:string}) => {
+const RotatePlayText = () => {
     return (
-        <div className={cn(styles.svg_block, className)}>
+        <div className={styles.svg_block}>
             <svg viewBox="0 0 200 200" className={styles.circle_text}>
                 <path id="circlePath" fill="transparent" stroke="none"
                       d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/>
                 <text fill="white">
                     <textPath href="#circlePath">
-                        Видео Видео Видео Видео Видео Видео
+                        Видео Видео Видео Видео Видео Видео Видео
                     </textPath>
                 </text>
 

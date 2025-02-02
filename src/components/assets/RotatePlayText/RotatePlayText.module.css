@@ -12,7 +12,7 @@
 }
 
 .circle_text{
-    font-size: 21px;
+    font-size: 1.25ch;
     animation: infinityRotate infinite linear 15s ;
 }
 

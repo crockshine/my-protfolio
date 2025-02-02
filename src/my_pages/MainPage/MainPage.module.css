@@ -6,12 +6,13 @@
     justify-content: center;
     overflow-x: hidden;
     overflow-y: hidden;
+    position: relative;
 }
 
 .main_info{
     position: absolute;
     width: 100%;
-    top: 50vh;
+    top: 50%;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-around;
@@ -63,9 +64,8 @@
     .main_info{
         flex-direction: column;
         z-index: 10;
-        top: 80vh;
+        top: 80%;
         text-align: center;
-
     }
     .main_info > div{
         flex-direction: row;

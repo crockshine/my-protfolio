@@ -3,7 +3,7 @@ import styles from './ProjectPage.module.css'
 import React from 'react';
 import ProjectCard from "@/components/assets/ProjectCard/ProjectCard";
 import {IProject} from "@/types/project.interface";
-import VideoPlayer from "@/modal/VideoPlayer/VideoPlayer";
+import VideoPlayer from "@/modal/VideoPlayerModal/VideoPlayerModal";
 
 const ProjectPage = () => {
     const projectsInfo:IProject[] = [

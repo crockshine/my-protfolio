@@ -37,7 +37,5 @@
     .about_page > div:first-child{
         display: none;
     }
-    .text_block{
-        font-size: 3vw;
-    }
+
 }

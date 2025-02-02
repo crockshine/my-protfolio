@@ -1,0 +1,37 @@
+.dialog_content{
+    width: 60%;
+    height: 70%;
+    background-color: #fff;
+}
+
+.video {
+    transform: scale(1.03);
+    display: block;
+    z-index: 20;
+}
+
+.fallback{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fallback img{
+    filter: saturate(0) brightness(0);
+
+}
+
+/*если устройство - телефон*/
+@media (max-aspect-ratio: 1/1) {
+    .dialog_content{
+        width: 90vw;
+        height: 60vw;
+    }
+}
