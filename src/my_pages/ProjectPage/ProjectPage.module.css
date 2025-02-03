@@ -3,6 +3,13 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    gap: 5vw;
 }
+
+@media (max-aspect-ratio: 1.5/1) {
+    .project_page{
+        gap: 10vw;
+    }
+}
+
 
