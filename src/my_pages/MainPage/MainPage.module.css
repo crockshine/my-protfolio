@@ -1,6 +1,6 @@
 .main_section{
     width: 100vw;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@
 }
 
 .main_info > span{
-    font-size: 7vh;
+    font-size: 7svh;
     font-weight: 100;
     line-height: 90%;
 }
@@ -35,14 +35,14 @@
 }
 
 .main_info > div > span{
-    font-size: 13vh;
+    font-size: 13svh;
     font-weight: bold;
     line-height: 90%;
 }
 
 .image_block{
     position: relative;
-    width: 70vh;
+    width: 70svh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,13 +51,13 @@
 .photo{
     position: absolute;
     bottom: 0;
-    width: 70vh;
+    width: 70svh;
     z-index: 2;
-    transform: translateY(0.2vh);
+    transform: translateY(0.2dvh);
 }
 
 .circle{
-    width: 70vh;
+    width: 70svh;
 }
 
 .social{
@@ -135,7 +135,6 @@
 }
 @media (max-aspect-ratio: 1/2) {
     .image_block{
-        bottom: 10%;
         width: 80vw;
     }
     .photo{

@@ -6,7 +6,7 @@
 .circle_text{
     font-size: 8px;
     animation: infinityRotate infinite linear 30s ;
-    width: 100vh;
+    width: 100dvh;
 }
 
 @keyframes infinityRotate {
@@ -20,7 +20,7 @@
 
 @media (max-aspect-ratio: 1/1){
     .circle_text{
-        width: 90vw;
+        width: 85dvw;
     }
 }
 

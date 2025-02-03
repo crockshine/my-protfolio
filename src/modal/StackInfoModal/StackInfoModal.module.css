@@ -14,6 +14,6 @@
 @media (max-aspect-ratio: 1/1) {
     .dialog_content{
         width: 80vw;
-        height: 60vh;
+        height: 40vh;
     }
 }

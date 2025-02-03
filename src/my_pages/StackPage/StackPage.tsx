@@ -53,7 +53,7 @@ const StackPage = () => {
         {
             title: 'pinia',
             imageUrl: 'pinia',
-            description: 'Аналогично с mobX, только для Vue',
+            description: 'Разделяю сторы на логичные отдельные части. Понимаю разницу между единым (глобальным) стором и локальным.',
             shadowColor: '#D2C80033'
         },
         {

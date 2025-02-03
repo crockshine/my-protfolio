@@ -7,13 +7,13 @@ import RotatePlayText from "@/components/assets/RotatePlayText/RotatePlayText";
 import {useModal} from "@/context/modal.context";
 import {ModalList} from "@/types/modal";
 
-const ProjectCard: React.FC<IProject> = ({title, description, imageUrl}) => {
+const ProjectCard: React.FC<IProject> = ({title, description, imageUrl, videoUrl}) => {
     const modal = useModal()
 
     return (
         <div className={styles.project_card}  >
 
-            <div className={styles.image_block} onClick={() => modal?.onOpen(ModalList.VIDEO, {imageUrl, videoUrl: 'https://www.youtube.com/watch?v=cE6wxDqdOV0'} )}>
+            <div className={styles.image_block} onClick={() => modal?.onOpen(ModalList.VIDEO, {imageUrl, videoUrl})}>
                 <Image
                     src={`/${imageUrl}.webp`}
                     width={728}

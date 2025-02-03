@@ -1,6 +1,6 @@
 .dialog_content{
-    width: 60vw;
-    height: 60vh;
+    width: 50vw;
+    aspect-ratio: 16/9;
     background-color: #fff;
     position: relative;
     z-index: -20;
