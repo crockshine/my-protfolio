@@ -1,19 +1,42 @@
 .dialog_content{
     width: 50vw;
-    height: 50vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
     padding: 3vw;
     gap: 2vw;
 }
-.spacer{
-    flex-grow: 1;
+
+.image_block{
+    overflow: hidden;
+    position: relative;
+    height: clamp(100%, 100%, 20vh);
+    width: 50%;
+}
+
+.image_block img{
+    height: clamp(100%, 100%, 20vh);
+    width: clamp(10vh, auto, auto);
+    object-fit: contain;
 }
 
 @media (max-aspect-ratio: 1/1) {
     .dialog_content{
         width: 80vw;
-        height: 40vh;
+    }
+
+    .image_block{
+        display: flex;
+        width: 100%;
+        min-height: 20vh;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-aspect-ratio: 1/2) {
+    .image_block img{
+        height: 50%;
     }
 }
