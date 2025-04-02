@@ -13,7 +13,7 @@ const unbounded = Unbounded({
 
 
 export const metadata: Metadata = {
-    title: "crockshine",
+    title: "Фронтенд портфолио",
     description: "Портфолио Королев Михаил",
 };
 

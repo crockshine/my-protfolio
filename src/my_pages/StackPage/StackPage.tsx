@@ -9,7 +9,7 @@ const StackPage = () => {
             title: 'react',
             imageUrl: 'react',
             description:
-                'Знаком с React 18.' +
+                'Знаком с React 19.' +
                 ' Умею работать с компонентами (RSC, Client Components), состоянием (ContextApi, стейт менеджеры),' +
                 ' хуками и маршрутизацией. Понимаю жизненный цикл компонента.',
             shadowColor: '#007FB633'
