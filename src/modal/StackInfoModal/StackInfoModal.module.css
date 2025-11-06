@@ -8,6 +8,10 @@
     gap: 2vw;
 }
 
+.dialog_content p{
+    font-family: var(--font-inter);
+}
+
 .image_block{
     overflow: hidden;
     position: relative;

@@ -36,11 +36,11 @@ const StackInfoModal = () => {
                             modalData?.title
                         }
                     </h2>
-                    <h3>
+                    <p>
                         {
                             modalData?.description
                         }
-                    </h3>
+                    </p>
                 </div>
 
             </DialogContent>

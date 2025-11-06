@@ -6,8 +6,16 @@ import Image from 'next/image'
 import RotatePlayText from "@/components/assets/RotatePlayText/RotatePlayText";
 import {useModal} from "@/context/modal.context";
 import {ModalList} from "@/types/modal";
+import Accordion from "@/components/assets/Accordion/Accordion";
+import LinkBadge from "@/components/assets/LinkBadge/LinkBadge";
 
-const ProjectCard: React.FC<IProject> = ({title, description, imageUrl, videoUrl}) => {
+const ProjectCard: React.FC<IProject> = ({
+                                             title,
+                                             description,
+                                             imageUrl,
+                                             videoUrl,
+    links
+}) => {
     const modal = useModal()
 
     return (
@@ -25,9 +33,20 @@ const ProjectCard: React.FC<IProject> = ({title, description, imageUrl, videoUrl
 
             <div className={styles.description}>
                 <h2>{title}</h2>
-                <h3>
-                    {description}
-                </h3>
+                <div className={styles.links_container}>
+                    {links?.map((link, idx) => (
+                        <LinkBadge
+                            key={idx}
+                            link={link.link}
+                            title={link.title}
+                            color={link.color}
+                        />
+                    ))}
+                </div>
+
+
+                <div className={'flex-1'}/>
+                <Accordion description={description}/>
             </div>
         </div>
     )

@@ -1,0 +1,16 @@
+.container{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.title{
+    font-family: var(--font-inter);
+    font-size: 12px;
+}

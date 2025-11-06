@@ -17,25 +17,20 @@ const MainPage = () => {
             <div className={styles.image_block}>
                 <RotateMainText/>
                 <Image
-                    src={'/photo.png'}
+                    src={'/photo.webp'}
+                    priority={true}
                     className={styles.photo}
-                    width={630}
-                    height={690}
+                    width={400}
+                    height={500}
                     alt={'photo'}
                 />
-                <Image
-                    src={'/circle.svg'}
-                    className={styles.circle}
-                    width={630}
-                    height={630}
-                    alt={'center_circle'}
-                />
+                <div className={styles.circle}/>
             </div>
             <div className={styles.social}>
                 <Button variant='secondary'>
-                    <a href="https://github.com/crockshine" className={styles.aBlock}>
+                    <a href="https://github.com/crockshine" target={'_blank'} className={styles.aBlock}>
                         <Image
-                            src={'/gh.png'}
+                            src={'/gh.webp'}
                             width={25}
                             height={25}
                             alt={'gh'}
@@ -44,9 +39,9 @@ const MainPage = () => {
                     </a>
                 </Button>
                 <Button variant='secondary'>
-                    <a href="https://t.me/crockshine" className={styles.aBlock}>
+                    <a href="https://t.me/crockshine" target={'_blank'}  className={styles.aBlock}>
                         <Image
-                            src={'/tg.png'}
+                            src={'/tg.webp'}
                             width={25}
                             height={25}
                             alt={'gh'}

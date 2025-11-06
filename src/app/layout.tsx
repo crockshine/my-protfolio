@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Unbounded} from "next/font/google";
+import {Unbounded, Inter} from "next/font/google";
 import "../styles/globals.css";
 import React from "react";
 import {ModalProvider} from "@/context/modal.context";
@@ -11,11 +11,20 @@ const unbounded = Unbounded({
     subsets: ["cyrillic", "latin"]
 });
 
+const inter = Inter({
+    variable: "--font-inter",
+    weight: ["400", "500", "600"],
+    subsets: ["cyrillic", "latin", "latin-ext"]
+});
 
 export const metadata: Metadata = {
-    title: "Фронтенд портфолио",
+    title: "Михаил Королев",
     description: "Портфолио Королев Михаил",
+    icons: {
+        icon: '/favicon.webp',
+    },
 };
+
 
 export default function RootLayout({
                                        children,
@@ -24,11 +33,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={unbounded.className}>
-          <ModalProvider>
-              {children}
-              <Modals/>
-          </ModalProvider>
+        <body className={`${unbounded.className} ${inter.variable}`}>
+        <ModalProvider>
+            {children}
+            <Modals/>
+        </ModalProvider>
         </body>
         </html>
     );

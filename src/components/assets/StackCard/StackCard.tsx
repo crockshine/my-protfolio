@@ -26,7 +26,7 @@ const StackCard: React.FC<IStack> = ({imageUrl, title, description, shadowColor}
             <div className={styles.info}>
                 <div className={styles.img_block}>
                     <Image
-                        src={`/${imageUrl}.png`}
+                        src={`/${imageUrl}.webp`}
                         width={110}
                         height={100}
                         alt={'programming language'}

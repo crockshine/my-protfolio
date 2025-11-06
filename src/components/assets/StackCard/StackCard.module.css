@@ -1,4 +1,5 @@
 .stack_card{
+    border-radius: 20px;
     --shadow-color: rgba(255, 255, 255, 0);
     width: 5vw;
     background-color: rgba(84, 84, 84, 0.29);

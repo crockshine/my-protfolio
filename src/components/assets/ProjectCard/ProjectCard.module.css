@@ -12,6 +12,14 @@
     gap: 2vw;
 }
 
+.links_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 .image_block{
     flex: 1;
     height: 20vw;
@@ -19,10 +27,10 @@
     animation: infinityAnimation infinite  ease-in-out 3s;
     animation-play-state: running;
     cursor: pointer;
-
 }
 
 .image_block img{
+    border-radius: 20px;
     width: 100%;
     height: 100%;
     object-fit: cover;
