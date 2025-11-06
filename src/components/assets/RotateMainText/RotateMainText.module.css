@@ -5,16 +5,17 @@
 
 .circle_text{
     font-size: 8px;
-    animation: infinityRotate infinite linear 30s ;
+    animation: infinityRotate 30s linear infinite;
     width: 100dvh;
+    animation-delay: 0s;
 }
 
 @keyframes infinityRotate {
-    from{
+    0% {
         transform: rotate(360deg);
     }
-    to{
-        transform: rotate(0);
+    100% {
+        transform: rotate(0deg);
     }
 }
 

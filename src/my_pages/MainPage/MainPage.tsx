@@ -1,17 +1,73 @@
+'use client'
 import styles from './MainPage.module.css'
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Image from 'next/image'
 import RotateMainText from "@/components/assets/RotateMainText/RotateMainText";
 import {Button} from "@/components/ui/button";
+import {gsap} from 'gsap';
 
-const MainPage = () => {
+
+const MainPage: React.FC = () => {
+    const nameRef = useRef<HTMLSpanElement | null>(null);
+    const titleRef = useRef<HTMLDivElement | null>(null);
+    const socialRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        gsap.fromTo(nameRef.current,
+            {
+                x: 100,
+                opacity: 0
+            },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out",
+            }
+        );
+
+        const titleSpans = titleRef.current?.querySelectorAll('span');
+        if (titleSpans) {
+            gsap.fromTo(titleSpans,
+                {
+                    x: -100,
+                    opacity: 0
+                },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: "power2.out",
+                }
+            );
+        }
+
+
+        const socialLinks = socialRef.current?.querySelectorAll('button');
+        if (socialLinks) {
+            gsap.fromTo(socialLinks,
+                {
+                    opacity: 0,
+                    scale: 0.8
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.6,
+                    stagger: 0.2,
+                    ease: "power2.out",
+                    delay: .5
+                }
+            );
+        }
+    }, []);
 
     return (
         <section className={styles.main_section}>
-
             <div className={styles.main_info}>
-                <span>михаил королев</span>
-                <div><span>frontend</span><span>dev</span></div>
+                <span ref={nameRef}>михаил королев</span>
+                <div ref={titleRef}><span>frontend</span><span>dev</span></div>
             </div>
 
             <div className={styles.image_block}>
@@ -26,7 +82,8 @@ const MainPage = () => {
                 />
                 <div className={styles.circle}/>
             </div>
-            <div className={styles.social}>
+
+            <div ref={socialRef} className={styles.social}>
                 <Button variant='secondary'>
                     <a href="https://github.com/crockshine" target={'_blank'} className={styles.aBlock}>
                         <Image
@@ -39,7 +96,7 @@ const MainPage = () => {
                     </a>
                 </Button>
                 <Button variant='secondary'>
-                    <a href="https://t.me/crockshine" target={'_blank'}  className={styles.aBlock}>
+                    <a href="https://t.me/crockshine" target={'_blank'} className={styles.aBlock}>
                         <Image
                             src={'/tg.webp'}
                             width={25}
@@ -53,6 +110,5 @@ const MainPage = () => {
         </section>
     )
 }
-
 
 export default MainPage;
