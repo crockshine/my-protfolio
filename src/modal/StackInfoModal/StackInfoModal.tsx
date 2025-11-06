@@ -24,7 +24,7 @@ const StackInfoModal = () => {
                 <div className={styles.dialog_content}>
                     <div className={styles.image_block}>
                         <Image
-                            src={`/${modalData?.imageUrl}.png` || ''}
+                            src={`/${modalData?.imageUrl}.webp` || ''}
                             width={100}
                             height={110}
                             alt={'stack logo'}
