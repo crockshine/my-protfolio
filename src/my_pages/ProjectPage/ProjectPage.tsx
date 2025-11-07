@@ -15,7 +15,7 @@ const ProjectPage = () => {
                 'адаптивный дизайн, что позволяет открывать его комфортно, как на телефоне так и на компьютере. ' +
                 'Сайт использует технологии SSG и ISR, что позволяет мгновенно получать информацию за считаные доли секунд!',
             imageUrl: 'codd',
-            videoUrl: 'https://rutube.ru/play/embed/dd86953f2bd4aac2a0ec0cd35cc14ffb/',
+            videoUrl: 'https://rutube.ru/play/embed/dd86953f2bd4aac2a0ec0cd35cc14ffb/?p=SlXKdBxJm_U1X8S4yBztrQ',
         },
         {
             title: 'Мобильное приложение кондитерской',

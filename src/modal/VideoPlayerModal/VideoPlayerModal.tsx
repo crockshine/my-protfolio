@@ -24,7 +24,10 @@ const VideoPlayerModal = () => {
                     <div className={styles.video}>
                         <iframe width="100%" height="100%"
                                 src={modal?.getModalData(ModalList.VIDEO)?.videoUrl}
-                                allowFullScreen></iframe>
+                                allowFullScreen
+                                allow="clipboard-write; autoplay"
+                        >
+                        </iframe>
                     </div>
                     <div className={styles.fallback}>
                         <h2>Пожалуйста, подождите.</h2> <h2>Видео загружается...</h2>
