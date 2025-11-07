@@ -27,7 +27,7 @@ const ProjectPage = () => {
                 'Приложение поддерживает систему лояльности — бонусы и промокоды. ' +
                 'В профиле отображается статистика: последние заказы, избранные товары, последние использованные адреса, уровень профиля и многое другое.',
             imageUrl: 'bomarshe',
-            videoUrl: 'https://rutube.ru/play/embed/97555508c25263f77a66015d71e2282a',
+            videoUrl: 'https://rutube.ru/play/embed/97555508c25263f77a66015d71e2282a/?p=ePRYHYfePcX90tCWINSY6w',
         },
         {
             title: 'Готовить? Легко!',
@@ -36,7 +36,7 @@ const ProjectPage = () => {
                 'Все рецепты разделены на категории: первые блюда, вторые блюда и десерты. ' +
                 'Приложение доступно как на телефоне, так и на компьютере благодаря технологии PWA. ',
             imageUrl: 'cookEasy',
-            videoUrl: 'https://rutube.ru/play/embed/610c0a862ecc27ea3766dbfbaa4cf387',
+            videoUrl: 'https://rutube.ru/play/embed/610c0a862ecc27ea3766dbfbaa4cf387/?p=tRlEhAFWmHbsy2jBOlyJ0g',
             links: [
                 {
                     link: 'https://github.com/crockshine/cookEase',
